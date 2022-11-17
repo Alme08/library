@@ -1,3 +1,103 @@
-*{
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+/* font-family: 'Quintessential', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+body{
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-size: 3rem;
+    font-family: 'Quintessential', cursive;
+    color: #fff;
+    padding: 0.2rem;
+}
+body > *{
+    border: 2px solid #000;
+}
+header{
+    background-color: #6D9886;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+main{
+    width: 70%;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.add{
+    align-self: center;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background: none;
+    transition: background-color 0.1s ease-in-out;
+}
+.add:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.book-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1rem));
+    justify-content: center;
+    justify-items: center;
+    gap: 50px 100px;
+}
+
+.book{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    height: 450px;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.book div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.book button{
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.1s ease-in-out;
+}
+.book button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.book .read{
+    background-color: #15ff9d;
+    transition: background-color 0.1s ease-in-out;
+}
+.book .read:hover{
+    background-color: #13da87;
+}
+.book .notRead{
+    background-color: rgb(255, 133, 133);
+    transition: background-color 0.1s ease-in-out;
+}
+.book .notRead:hover{
+    background-color: rgb(211, 114, 114);
 }
