@@ -16,6 +16,21 @@
     </header>
     <main>
         <button class="add">+ Add book</button>
+        <div class="form-page display-none">
+            <div>
+                <h2>Add new book</h2>
+                <form action="" id="form">
+                    <input type="text" name="title" id="title" placeholder="Title" required>
+                    <input type="text" name="author" id="author" placeholder="Author" required>
+                    <input type="number" name="pages" id="pages" placeholder="Pages" required>
+                    <div>
+                        <label for="read">Have you read it?</label>
+                        <input type="checkbox" name="read" id="read" required>
+                    </div>
+                    <input class="submit" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
         <div class="book-container">
             <div class="book">
                 <p>"Title"</p>

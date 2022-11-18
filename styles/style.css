@@ -101,3 +101,77 @@ main{
 .book .notRead:hover{
     background-color: rgb(211, 114, 114);
 }
+
+.form-page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-page > div{
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #e9e9e9;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.form-page > div h2{
+    margin: 0;
+}
+.form-page > div > form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-page > div > form > input{
+    height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+.form-page > div > form > div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.form-page > div > form > div > input{
+    width: 20px;
+    height: 20px;
+    accent-color: white;
+}
+.form-page > div label{
+    font-size: 20px;
+    font-weight: 500;
+}
+.form-page > div .submit{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #15ff9d;
+    transition: background-color 0.1s ease-in-out;
+}
+.form-page > div  .submit:hover{
+    background-color: #13da87;
+}
+.display-none{
+    display: none;
+}
