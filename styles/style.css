@@ -15,9 +15,6 @@ h1{
     color: #fff;
     padding: 0.2rem;
 }
-body > *{
-    border: 2px solid #000;
-}
 header{
     background-color: #6D9886;
     display: flex;
