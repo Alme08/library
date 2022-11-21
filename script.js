@@ -44,45 +44,48 @@ form.addEventListener('submit', e=>{
         book_container.innerHTML += library[book].showInfo(book);
     }
 })
-
-function Book(title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-Book.prototype.showInfo = function(index){
-    if (this.read === true) {
-        return `
-                <div class="book">
-                        <p>"${this.title}"</p>
-                        <p>${this.author}</p>
-                        <p>${this.pages} pages</p>
-                        <div>
-                            <button id="statusRead" class="read" data-index=${index}>Read</button>
-                            <button id="delete" data-index=${index}>Delete</button>
-                        </div>
-                    </div>
-                `;
-    } else {
-        return `
-                <div class="book">
-                        <p>"${this.title}"</p>
-                        <p>${this.author}</p>
-                        <p>${this.pages} pages</p>
-                        <div>
-                            <button id="statusRead" class="notRead" data-index=${index}>Not read</button>
-                            <button id="delete" data-index=${index}>Delete</button>
-                        </div>
-                    </div>
-                `;
+class Book{
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
-}
-Book.prototype.changeStatus = function(){
-    if (this.read === true) {
-        this.read = false
-    }else{
-        this.read = true
+
+    showInfo(index){
+        if (this.read === true) {
+            return `
+                    <div class="book">
+                            <p>"${this.title}"</p>
+                            <p>${this.author}</p>
+                            <p>${this.pages} pages</p>
+                            <div>
+                                <button id="statusRead" class="read" data-index=${index}>Read</button>
+                                <button id="delete" data-index=${index}>Delete</button>
+                            </div>
+                        </div>
+                    `;
+        } else {
+            return `
+                    <div class="book">
+                            <p>"${this.title}"</p>
+                            <p>${this.author}</p>
+                            <p>${this.pages} pages</p>
+                            <div>
+                                <button id="statusRead" class="notRead" data-index=${index}>Not read</button>
+                                <button id="delete" data-index=${index}>Delete</button>
+                            </div>
+                        </div>
+                    `;
+        }
+    }
+
+    changeStatus(){
+        if (this.read === true) {
+            this.read = false
+        }else{
+            this.read = true
+        }
     }
 }
 
